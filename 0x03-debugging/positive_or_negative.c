@@ -1,13 +1,13 @@
-#include  "main.h"
+#include "main.h"
+
 
 void positive_or_negative(int i)
 {
-	if (i > 0)
-		printf("%xd is positive\n", i);
+    if (i>0)
+           printf("%d is postive\n",i);
 
-	else if (i < 0)
-		printf("%xd is negative\n", i);
-
-	else
-		printf("%xd is zero\n", i);
+         else if (i<0)
+                  printf("%d is negative\n",i);
+         else
+                  printf("%d is zero\n",i);
 }
