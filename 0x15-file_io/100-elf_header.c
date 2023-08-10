@@ -135,7 +135,7 @@ void print_version(unsigned char *e_ident)
  * print_osabi - Prints the OS/ABI of an ELF header.
  * @e_ident: A pointer to an array containing the ELF version.
  */
-void print_osabi_print_abi(unsigned char *e_ident[][0], unsigned char *e_ident[][1])
+void print_osabi_print_abi(unsigned char *e_ident[][0], unsigned char *e_ident[][1]){
 {
 	printf(" OS/ABI: ");
 
@@ -174,10 +174,11 @@ void print_osabi_print_abi(unsigned char *e_ident[][0], unsigned char *e_ident[]
 	default:
 		printf("<unknown: %x>\n", e_ident[EI_OSABI]);
 	}
-	 printf(" ABI Version: %d\n",
-		e_ident[EI_ABIVERSION][1]);
+	
 }
-
+{printf(" ABI Version: %d\n",
+                e_ident[EI_ABIVERSION][1]);}
+;}
 /**
  * print_abi - Prints the ABI version of an ELF header.
  * @e_ident: A pointer to an array containing the ELF ABI version.
