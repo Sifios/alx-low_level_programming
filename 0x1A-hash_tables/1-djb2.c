@@ -1,20 +1,20 @@
 #include "hash_tables.h"
 
 /**
- * my_hash_djb2 - Hash function implementing the djb2 algorithm.
- * @my_str: The string to hash.
+ * hash_djb2 - Hash function implementing the djb2 algorithm.
+ * @str: The string to hash.
  *
  * Return: The calculated hash.
  */
 
-unsigned long int my_hash_djb2(const unsigned char *my_str)
+unsigned long int hash_djb2(const unsigned char *str)
 {
-    unsigned long int my_hash;
-    int my_count;
+	unsigned long int hash;
+	int count;
 
-    my_hash = 5381;
-    while ((my_count = *my_str++))
-        my_hash = ((my_hash << 5) + my_hash) + my_count;
+	hash = 5381;
+	while ((count = *str++))
+		hash = ((hash << 5) + hash) + count;
 
-    return (my_hash);
+	return (hash);
 }
